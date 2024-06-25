@@ -1,0 +1,24 @@
+.container {
+    margin-top: 30px;
+}
+.item {
+    background-color: var(--card-back);
+    text-transform: capitalize;
+    /* font-size: 2rem; */
+    font-weight: 700;
+    cursor: pointer;
+    width: 150px;
+    height: 120px;
+    padding: 10px 10px 10px 10px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}

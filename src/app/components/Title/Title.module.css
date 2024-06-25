@@ -1,0 +1,12 @@
+.title {
+    /* font-size: 3rem; */
+    margin: 5px;
+    width: fit-content;
+}
+.title::first-letter {
+    text-transform: uppercase;
+}
+
+.subheader {
+    margin-top: 10px !important;
+}

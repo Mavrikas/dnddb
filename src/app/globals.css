@@ -32,6 +32,9 @@ body {
     background-color: var(--body-background);
     /* font-size: 1.7rem; */
 }
+h1 {
+    font-size: 4rem !important;
+}
 /* h1 {
     font-size: 4rem !important;
 }

@@ -7,7 +7,6 @@ import { Grid } from '../components/Grid/Grid'
 import { Title } from '../components/Title/Title'
 import { AbilityScores } from '../components/Categories/AbilityScores/AbilityScores'
 import { Alignments } from '../components/Categories/Alignments/Alignments'
-import { Backgrounds } from '../components/Categories/Backgrounds/Backgrounds'
 import { Classes } from '../components/Categories/Classes/Classes'
 import { Conditions } from '../components/Categories/Conditions/Conditions'
 import { DamageTypes } from '../components/Categories/DamageTypes/DamageTypes'
@@ -97,6 +96,7 @@ export default function resourcePage({
     return (
         <main className={styles.main}>
             <Title
+                type="h2"
                 title={
                     resources?.name != undefined
                         ? resources.name

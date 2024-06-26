@@ -1,22 +1,18 @@
 import Typography from '@mui/material/Typography'
 import styles from './Title.module.css'
+import { TitleProps } from './types'
 
-export const Title = ({
-    title,
-    type = 'h1',
-}: {
-    title: string
-    type: 'h1' | 'h2' | 'h3' | 'h4'
-}) => {
-    let extraStyles
+export const Title = ({ title, type = 'h1', extraStyles }: TitleProps) => {
+    let subheaderStyles
     if (type != 'h1') {
-        extraStyles = styles.subheader
+        subheaderStyles = styles.subheader
     }
     return (
         <Typography
             variant={type}
             gutterBottom
-            className={[styles.title, extraStyles].join(' ')}
+            className={[styles.title, subheaderStyles].join(' ')}
+            sx={extraStyles}
         >
             {title}
         </Typography>

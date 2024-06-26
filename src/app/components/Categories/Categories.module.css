@@ -1,18 +1,4 @@
 .container {
-    background-color: black;
-    color: white;
+    background-color: transparent;
     border-radius: 0 !important;
 }
-
-/* .list {
-    font-size: 1.8rem;
-    margin-top: 10px !important;
-}
-.listItem {
-    margin-top: 10px;
-    min-width: min-content !important;
-    max-width: 200px !important;
-}
-.listItem:hover {
-    text-decoration: underline;
-} */

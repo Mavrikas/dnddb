@@ -10,4 +10,8 @@
 }
 .link {
     color: inherit;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }

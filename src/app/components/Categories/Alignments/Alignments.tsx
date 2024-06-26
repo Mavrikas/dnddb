@@ -1,22 +1,15 @@
-import { Card, CardContent, List, ListItem, Typography } from '@mui/material'
-import { Suspense } from 'react'
+import { Card, CardContent } from '@mui/material'
 import styles from '../Categories.module.css'
-import Link from 'next/link'
 import { Description } from '../../Description/Description'
-import { Title } from '../../Title/Title'
+import { LabelValue } from '../../LabelValue/LabelValue'
 
 export const Alignments = ({ data }: { data: any }) => {
     return (
-        <Suspense fallback="loading...">
-            <Card className={styles.container}>
-                <CardContent className={styles.container}>
-                    <Title
-                        type="h3"
-                        title={`${data.name} (${data.abbreviation})`}
-                    />
-                    <Description data={data.desc} />
-                </CardContent>
-            </Card>
-        </Suspense>
+        <Card className={styles.container}>
+            <CardContent className={styles.container}>
+                <LabelValue label={'Abbreviation'} value={data.abbreviation} />
+                <Description data={data.desc} />
+            </CardContent>
+        </Card>
     )
 }

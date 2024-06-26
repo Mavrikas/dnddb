@@ -1,9 +1,7 @@
 import { Typography } from '@mui/material'
 import styles from './Description.module.css'
+import { DescProps } from './types'
 
-type DescProps = {
-    data: string | string[]
-}
 export const Description = ({ data }: DescProps) => {
     if (Array.isArray(data)) {
         return data.map((item, i) => (
@@ -15,9 +13,6 @@ export const Description = ({ data }: DescProps) => {
             >
                 {item}
             </Typography>
-            // <p key={item[0] + i} className={styles.text}>
-            //     {item}
-            // </p>
         ))
     }
     return (
@@ -25,5 +20,4 @@ export const Description = ({ data }: DescProps) => {
             {data}
         </Typography>
     )
-    return <p className={styles.text}>{data}</p>
 }

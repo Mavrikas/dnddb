@@ -3,17 +3,9 @@ import ListItem from '@mui/material/ListItem'
 import Link from 'next/link'
 import styles from './LinkList.module.css'
 import { Url } from 'next/dist/shared/lib/router/router'
+import { Title } from '../Title/Title'
+import { LinkListProps } from './types'
 
-type Data = {
-    url?: Url
-    name: string
-    index?: string
-}
-type LinkListProps = {
-    subHeader: string
-    data: Data[]
-    hasLinks?: boolean
-}
 export const LinkList = ({
     data,
     subHeader,
@@ -21,7 +13,12 @@ export const LinkList = ({
 }: LinkListProps) => {
     return (
         data.length > 0 && (
-            <List subheader={subHeader} className={styles.list}>
+            <List className={styles.list}>
+                <Title
+                    type="h6"
+                    title={subHeader}
+                    extraStyles={{ 'text-align': 'left !important' }}
+                />
                 {hasLinks
                     ? data.map((item, i: number) => {
                           return (

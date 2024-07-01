@@ -16,3 +16,5 @@ type AbilityScore = {
     full_name: string
     skills: Skill[]
 }
+
+export type Description = string | string[]

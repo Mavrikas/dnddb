@@ -1,8 +1,8 @@
 'use client'
 import Image from 'next/image'
 import styles from '../page.module.css'
-import { Suspense, useCallback, useEffect, useState } from 'react'
-import { getCategories, getCategoryData } from '../api'
+import { useCallback, useEffect, useState } from 'react'
+import { getCategoryData } from '../api'
 import { Grid } from '../components/Grid/Grid'
 import { Title } from '../components/Title/Title'
 import { AbilityScores } from '../components/Categories/AbilityScores/AbilityScores'
@@ -93,17 +93,17 @@ export default function resourcePage({
         }
     }
 
+    const getTitle = (res) => {
+        if (res && (res.name || res.full_name)) {
+            return res.full_name || res.name
+        }
+        return params.resource[params.resource.length - 1]
+    }
+
     return (
         <main className={styles.main}>
-            <Title
-                type="h2"
-                title={
-                    resources?.name != undefined
-                        ? resources.name
-                        : params.resource[params.resource.length - 1]
-                }
-            />
-            <Suspense fallback={'loading...'}>{getBody(resources)}</Suspense>
+            <Title type="h2" title={getTitle(resources)} />
+            {getBody(resources)}
         </main>
     )
 }

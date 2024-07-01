@@ -1,5 +1,4 @@
 'use client'
-import Image from 'next/image'
 import styles from './page.module.css'
 import { useCallback, useEffect, useState } from 'react'
 import { getCategories } from './api'

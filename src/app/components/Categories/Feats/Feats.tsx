@@ -1,10 +1,7 @@
-import { Card, CardContent, List, ListItem, Typography } from '@mui/material'
-import { Suspense } from 'react'
+import { Card, CardContent } from '@mui/material'
 import styles from '../Categories.module.css'
 import Link from 'next/link'
-import { LinkList } from '../../LinkList/LinkList'
 import { LabelValue } from '../../LabelValue/LabelValue'
-import { Section } from '../../Section/Section'
 import { Description } from '../../Description/Description'
 
 export const Feats = ({ data }: { data: any }) => {
@@ -31,13 +28,11 @@ export const Feats = ({ data }: { data: any }) => {
             </>
         ))
     return (
-        <Suspense fallback="loading...">
-            <Card className={styles.container}>
-                <CardContent className={styles.container}>
-                    <Description data={data.desc} />
-                    {getPrerequisitesInfo(data.prerequisites)}
-                </CardContent>
-            </Card>
-        </Suspense>
+        <Card className={styles.container}>
+            <CardContent className={styles.container}>
+                <Description data={data.desc} />
+                {getPrerequisitesInfo(data.prerequisites)}
+            </CardContent>
+        </Card>
     )
 }

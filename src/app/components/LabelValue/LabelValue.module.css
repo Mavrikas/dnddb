@@ -1,7 +1,6 @@
-/* .container {
-    font-size: 1.5rem;
-} */
+.container {
+    margin: 5px 0;
+}
 .label {
-    /* font-size: 1.7rem; */
     font-weight: 600;
 }
